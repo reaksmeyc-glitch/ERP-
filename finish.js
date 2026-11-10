@@ -1,0 +1,2 @@
+(function(){const orig=nav,groups=[['sales','OPERATIONS'],['finance','CONTROL']];
+window.nav=function(){orig();groups.forEach(function(g){const b=document.querySelector('#nav [data-page="'+g[0]+'"]');if(b&&!(b.previousElementSibling&&b.previousElementSibling.classList.contains('nav-group'))){const d=document.createElement('div');d.className='nav-caption nav-group';d.textContent=g[1];b.before(d)}})};nav();render()})();
